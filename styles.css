@@ -1,0 +1,11 @@
+#canvas {border:1px solid lightblue}
+#canvas_cont {display:table}
+#playhead_container {float:left;width:100%}
+#playhead_container #playhead {width:100%}
+#timer {width:150px;float:right;margin-right:-150px;text-align:center}
+#tools, #record_tools {height:20px;display:table;margin-bottom:8px;}
+.tool_button {float:left;width:120px;height:18px;border:1px solid lightgrey;margin:0 4px 0 0;text-align:center;cursor:pointer;}
+.tool_button.selected {border:1px solid black;}
+.tool_button.recording {border:1px solid black;color:red}
+.tool_button.disabled {border:1px solid lightgrey!important;color:lightgrey;cursor:default}
+.tool_button:hover {border:1px solid black;}

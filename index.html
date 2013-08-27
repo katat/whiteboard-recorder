@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script src="js/jquery-1.7.min.js"></script>
+		<script src="js/board.js"></script>
+		<link rel="stylesheet" href="styles.css"/>
+	</head>
+	<body>
+		<div id="canvas_cont">
+			<canvas id="canvas" width="600" height="400"></canvas><br/>
+			<div id="playhead_container">
+				<input id="playhead" type="range" min="0" max="0" value="0" onchange="canvasToFrame((Number)($(this).val()))"/>
+			</div>
+			<div id="timer">0</div>
+		</div>
+		Drawing:
+		<div id="tools">
+			<div id="cover"></div>
+			<div class="tool_button selected disabled" onclick="pickTool(this)">Pen</div>
+			<div class="tool_button disabled" onclick="pickTool(this)">Eraser</div>
+		</div>
+		Recording:
+		<div id="record_tools">
+			<div class="tool_button" onclick="toggleRecording(this)" title="Click to start (or continue) recording">Record</div>
+			<div class="tool_button" id="play_button" onclick="play(this)" title="Click to play recorder drawing">Play</div>
+			<div class="tool_button" onclick="exportRecording()" title="Output the string to console (press F12 in Chrome)">Export</div>
+			<div class="tool_button" onclick="clearFrames()" title="Clears the recorded animation">Clear Frames</div>
+		</div>
+	</body>
+</html>
